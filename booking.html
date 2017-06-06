@@ -1,0 +1,79 @@
+<!--File Name: booking.html
+	Author: John Barraca
+	Project: Assignment2
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cabs Online</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/tvh8833.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	 $( function() 
+	 {
+	   $( "#date" ).datepicker({ dateFormat: 'yy-mm-dd' });
+	   $( "#time" ).timepicker();
+	 } );
+	</script>
+	<script type="text/javascript" src="js/jquery.timepicker.js"> </script>
+	<script type="text/javascript" src="js/address.js"> </script>
+	<script type="text/javascript" src="js/tvh8833xhr.js"> </script>
+	<script type="text/javascript" src="js/booking.js"> </script>
+</head>
+<body>
+	<!--Booking Request-->
+	<div>
+	
+	<!--Form to be fill-in by the customer-->
+	<form action="#">
+		<label for="Name">Your Name</label>
+		<input type="text" name="custName" id="custName" placeholder="John" required/>
+
+		<label for="Contact">Mobile Number</label>
+		<input type="text" name="mobileNum" id="mobileNum" placeholder="0220247218" required/>
+
+		<label for="address_line_1">Unit/Flat</label>
+		<input type="text" id="address_line_1" name="unit" placeholder="Search Address" required/>
+
+		<label for="field_address_line_2">Street</label>
+		<input type="text" id="address_line_2" name="street" placeholder="26 Simkin" required/>
+
+		<label for="suburb">Suburb</label>
+		<input type="text" id="pickSuburb" name="pickSuburb" placeholder="Saint Johns" required/>
+
+
+		<label for="city">City</label>
+		<input type="text" id="city" name="city" placeholder="Auckland" required/>
+
+		<label for="postcode">Postcode</label>
+		<input type="text" id="postcode" name="postcode" placeholder="1072" required/>
+
+		<label for="date">Date</label>
+		<input type="text" id="date" name="date" placeholder="2017/06/01" required/>
+
+		<label for="time">Time</label>
+		<input type="text" id="time" name="time" placeholder="10:30AM" required/>
+
+		<label for="destSuburb">Destination Address</label>
+		<input type="text" id="destSuburb" name="destSuburb" placeholder="1/12 Cruickshank Crescent, Meadowbank, Aucland, 1072" required/>
+
+		<!--Form submitted to booking.js using getData() function-->
+		<input type="button" value="Book Now!" onClick = "getData('php/booking.php','targetDiv')" />
+		</form>
+	<!--Booking Request Done-->
+	</div>
+
+	<!--Confirmation From Server Goes Here-->
+	<div id="targetDiv">
+		<p>Booking Confirmation Will Display Here</p>
+	</div>
+	<div>
+	<a href="index.html"><button type="button">Home Page</button></a>
+	</div>
+</body>
+</html>

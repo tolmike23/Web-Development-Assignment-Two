@@ -1,0 +1,42 @@
+<!--File Name: admin.html
+	Author: John Barraca
+	Project: Assignment2
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cabs Online</title>
+<link rel="stylesheet" type="text/css" href="css/tvh8833.css">
+<script src="https://code.jquery.com/jquery-2.0.0.js"></script>
+<script type="text/javascript" src="js/tvh8833xhr.js"> </script>
+<script type="text/javascript" src="js/admin.js"> </script>
+</head>
+<body>
+	<!--Admin Request-->
+	<div>
+	<!--Form to be fill-in by the admin-->
+	<form>
+	<label>Admin Search For Booking Request</label>
+	<br>
+	<button type="button" id="search" value="unassign" name="search" onClick = "getData('php/admin.php','targetDiv')">Search</button>
+	<br>
+	<br>
+	<label>Assigned Booking Request</label>
+	<input type="text" id="assign" name="assign"/>
+	<br>
+	<br>
+	<button type="button" onClick = "getData('php/adminAssign.php','targetDiv')">assigned</button>
+	<br>
+	</form>
+	<!--Admin Request Done-->
+	</div>
+	<!--Confirmation From Server Goes Here-->
+	<div id="targetDiv">
+		<p>Booking Confirmation Will Display Here</p>
+	</div> 
+	
+	<div>
+	<a href="index.html"><button type="button">Home Page</button></a>
+	</div>
+</body>
+</html>
