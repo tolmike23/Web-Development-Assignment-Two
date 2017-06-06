@@ -1,0 +1,15 @@
+CREATE TABLE Cabs (
+custName varchar(100) not null, 
+contact int(11) not null,
+unit varchar(100) not null,
+street varchar(100) not null, 
+suburb varchar(100) not null, 
+city varchar(100) not null,
+postcode varchar(100) not null,
+date DATE not null, 
+time TIME not null, 
+destAddress varchar(100) not null, 
+status varchar(50) not null, 
+bookRef varchar(100) not null,
+primary key(bookRef)
+);
